@@ -1,66 +1,289 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<!-- Bootstrap -->
-    <link href="/static/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Anax</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link href="/static/css/cover.css" rel="stylesheet">
-<title>Anax Security</title>
+<style>
+body {
+/* background-color: #66696f; */
+background-color: #ffffff;
+color: #333639;
+}
+.row-centered {
+    text-align:center;
+}
+.spacer-section {
+background: linear-gradient(black, #66696f);
+width: 100%;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    vertical-align: top;
+    /* reset the text-align */
+    /* text-align:left; */
+    /* inline-block space fix */
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.job-reqs {
+text-align: left;
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 40px;
+}
+.job-reqs p {
+margin-bottom: 15px;
+}
+.job-reqs li {
+margin-bottom: 5px;
+}
+section#careers h2 {
+margin-bottom: 15px;
+margin-top: 10px;
+}
+.desc-column p {
+/* font-size: 16px; */
+text-align: justify;
+}
+@media (min-width: 767px) {
+.desc-column p {
+margin-right: 15px;
+margin-left: 15px;
+}
+section#contact .content-section {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+}
+section#contact {
+background-color: #000000;
+color: #ffffff;
+}
+.contact-section {
+width: 100%;
+background: url(img/contact.jpg) no-repeat center center scroll;
+}
+</style>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("c4ba2b9f23c3e6c66b803f531837bc71");</script><!-- end Mixpanel -->
+
 </head>
-<body>
-<div id="wrap">
-<h1>ANAX</h1>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa"></i>ANAX <span class="light">Security</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#platform">Platform</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#careers">Careers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">ANAX</h1>
+                        <p class="intro-text">A different kind of security company.</p>
+                        <a href="#platform" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+   <!-- spacer section -->
+<!--
+    <section id="spacer" class="spacer-section container content-section text-center">
+<div class="container container-sm-height">
+</div>
+    </section>
+-->
+    <!-- About Section -->
+    <section id="platform" class="container content-section text-center">
+<!--
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Anax Platform</h2>
+-->
 
 <div class="container container-sm-height">
  <div class="row row-sm-height">
-  <div class="col-sm-6 col-sm-height">
+  <div class="col-sm-5 col-sm-height col-centered">
    <div class="product">
     <h2>Targeted Attack Protection</h2>
-    <h3>Detect and mitigate targeted campaigns</h3>
+    <h3>Detect and mitigate<br />targeted campaigns</h3>
+<div class="desc-column">
     <p>
 Designed for organizations likely to be subjected to well-coordinated campaigns, the Anax Targeted Attack Protection (TAP) platform detects and stops targeted attacks before they cause harm.</p>
 <p>Anax TAP identifies advanced threat actors among the sea of benign and low-grade malicious activity to give you advance warning before major damages occur.
     </p>
+</div>
     </div>
    </div>
-   <div class="col-sm-6 col-sm-height">
+   <div class="col-sm-5 col-sm-height col-centered">
     <div class="product">
-     <h2>Malware Intelligence</h2>
+     <h2>Malware<br />Intelligence</h2>
      <h3>Enabling large-scale malware learning</h3>
-     <p>
-Anax's BigMal platform is the leader in large scale malware intelligence. BigMal offers unprecedented insight into the real threat situation directly affecting your organization.</p>
+<div class="desc-column">
+     <p>Anax's BigMal platform is the leader in large scale malware intelligence. BigMal offers unprecedented insight into the real threat situation directly affecting your organization.</p>
 <p>Take advantage of the BigMal platform using our network appliance or connect existing sources with our simple API. Tailored solutions are available for enterprise customers.
      </p>
+</div>
     </div>
    </div>
   </div>
  </div>
+<!--
+
+            </div>
+        </div>
+-->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Services</h2>
+                    <p>Anax implements high velocity analytics platforms used to uncover threats hidden in very large amounts of security data. Our team has extensive experience in large scale data systems, cybersecurity, and machine learning acquired while delivering systems for the intelligence community, US Department of Defense and commercial clients. Contact us for more information at info@anaxsec.com.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+<section id="careers" class="container content-section text-center">
+<div class="container">
+<div class="row">
+<div class="col-sm-8 col-centered">
+<h2>Data Visualization Developer</h2>
+<div class="job-reqs">
+<p>Requirements:</p>
+<ul>
+<li>Demonstrated talent making large scale data grokable</li>
+<li>Proficiency with data rendering technologies such as D3 and similiar tools</li>
+<li>Understanding of best practices for representing common types of information such as time series data, scatter plots and graphs</li>
+</ul>
+<p>For consideration email careers@anaxsecurity.com</p>
 </div>
 </div>
-<div id="footer">
- <div class="container">
-<span id="contact">info@anaxsec.com</span><br />
-<span id="legalese">copyright 2014 Anax Security, all rights reserved | <a href="#">privacy policy</a></span>
-  </div>
 </div>
+<div class="row">
+<div class="col-sm-8 col-centered">
+<h2>Big Data Engineer</h2>
+<div class="job-reqs">
+<p>Requirements:</p>
+<ul>
+<li>Rock solid understanding of fundamental computer science principles and algorithms</li>
+<li>Familiarity with technologies such as Spark, Hadoop, Storm, Kafka or similiar</li>
+</ul>
+<p>For consideration email careers@anaxsecurity.com</p>
+</div>
+</div>
+</div>
+</div>
+    </section>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="/static/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
-<script>
-$( document ).ready(function() {
-    var heights = $(".product").map(function() {
-        return $(this).height();
-    }).get(),
+<section id="contact">
+<div class="contact-section">
+<div class="container content-section text-center">
+<div class="row">
+<div class="col-sm-8 col-centered">
+<p>contact us at info@anaxsec.com</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    maxHeight = Math.max.apply(null, heights);
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Anax Security 2014</p>
+        </div>
+    </footer>
 
-    $(".product").height(maxHeight);
-});
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+    <script>
+mixpanel.track("Page Load");
 </script>
 
 </body>
+
 </html>
